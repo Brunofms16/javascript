@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        * {margin: 0px; padding: 0 ;font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;}
+body{
+    background:rgba(0, 0, 0, 0.432) url(https://th.bing.com/th/id/R.66e0775ddf5f9d88a36b1bf8f358b9b2?rik=vWHxKQzS80gorQ&pid=ImgRaw&r=0);
+  
+    background-size: cover
+    ;
+}
+        main {
+            border: 3px  transparent;
+            padding-top: 100px;
+        }
+        .container {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 10px transparent;
+            border-radius: 10px;
+            width: 95vw;
+            height: 400px;
+            margin-top: 100px;
+            margin: auto;
+            ma
+        }
+        p {
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        #txtbtn {background-color: rgb(6, 184, 6);
+        color:white;
+    border-radius: 20px;
+padding: 10px;
+width: 300px;
+}
+
+        
+#txtvel {
+ margin: 20px;
+
+}
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>SISTEMA DE MULTAS</h1>
+        
+               <p><strong>velocidade do carro em KM/h:</strong></p> <input type="number" name="txtvel" id="txtvel"> 
+               <input type="button" name="txtbtn" id="txtbtn" value="verificar"  onclick="calcular()">
+        
+            <div id="resu">
+                <p id="res"></p>
+            </div>
+        </div>
+    </main>
+
+   <script>
+    
+
+    function calcular() {
+        var txtv = document.querySelector("#txtvel")
+        var vel = Number(txtv.value)
+        var  res = document.querySelector("#res")
+
+        res.innerHTML = `<p>sua velocidade atual é de <strong>${vel} Km/h </strong></p>`
+        
+
+        if ( vel > 60) {
+            res.innerHTML += `<p>Você esta sendo <strong>MULTADO</strong> por excesso de velocidade</p>`
+
+        }
+        else {
+            res.innerHTML += `<p>Você esta em uma velocidade <strong>Segura</strong> continue seu trajeto <br> e use sempre o sinto de segurança `
+            
+        }
+       
+    }
+
+   </script>
+</body>
+</html>

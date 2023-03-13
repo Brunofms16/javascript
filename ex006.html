@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elementos DOM</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+        div {
+            background: rgb(0, 155, 0);
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            padding: 20px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+<p id="pe" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">interaja...</p>
+    </div>
+
+<script defer>
+    var p = document.getElementById("pe")
+    var a = document.getElementById("area")
+    a.addEventListener ('click' , clicar)
+    a.addEventListener ('mouseenter' , entrar)
+    a.addEventListener ('mouseout' , sair)
+
+
+function clicar() {
+    p.innerHTM = "cilcou"
+}
+function entrar() {
+    p.innerHTML = 'entrou'
+    a.style.background = 'red'
+}
+function sair() {
+    p.innerHTML = 'saiu'
+    a.style.background = 'green'
+}
+</script>
+
+</body>
+</html>

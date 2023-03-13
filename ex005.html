@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos em Dom</title>
+    <style>
+        *{background: rgb(32, 143, 218);
+        color: white;
+    font-family: Arial, Helvetica, sans-serif;
+text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>primeiros passos em <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo</p>
+    <div id="msg">Clique em mim</div>
+
+    <script defer>
+var p1 = document.getElementsByTagName('p')[0,1]
+
+// var d = document.getElementById('msg')
+
+// document.getElementById('msg').innerText = 'ola']
+
+var d = document.querySelector('#msg')
+d.style.background = "red"
+    </script>
+
+</body>
+</html>

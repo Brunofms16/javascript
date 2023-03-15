@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <style>
+        body
+        .container {
+            display: grid;
+            grid-template-columns: 30% 30%30%;
+            grid-template-rows: 300px 300px;
+            grid-column-gap:50px ;
+            grid-row-gap:20px;
+            align-items: stretch;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .item1 {
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://www.themoviedb.org/t/p/original/5Ch4NpEa6qmGyVxWNDiGYadadJw.jpg);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+        }
+        .item2 {
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://th.bing.com/th/id/R.99da8ffd5489e10bb60bc3ca0d5db1ba?rik=9yEkZDHHIjNoOg&riu=http%3a%2f%2fbr.web.img2.acsta.net%2fmedias%2fnmedia%2f18%2f97%2f04%2f22%2f20504502.jpg&ehk=0Q5YlITMZ3NgENn6NuP3jBni5EZ%2fIE69%2b9iT0KQ2AjI%3d&risl=&pid=ImgRaw&r=0);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+
+        }
+        .item3 {
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://th.bing.com/th/id/OIP.NtggLjKzXUSbJw5V-tC66gHaK-?pid=ImgDet&rs=1);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+        }
+        .item4 {
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://i1.wp.com/www.hostfilmes.com/wp-content/uploads/2018/12/Shrek-4-Shrek-Para-Sempre-Dublado-520x669.jpg);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+
+        }
+        .item5 {
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://th.bing.com/th/id/OIP.IpNLUcQHyT-d96x69_pOFwHaKg?pid=ImgDet&rs=1);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+
+        }
+        .item6{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            background: url(https://th.bing.com/th/id/OIP.IPFr-0WetXLLFFY7J_ZXXgHaLu?pid=ImgDet&rs=1);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+
+
+        }
+        h1 , h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> Qual é o melhor filme</h1>
+
+    <h2>Avalie seu bom gosto para com os filmes da DreamWorks <br></h2>
+
+    <h2 id="sua"></h2>
+   <div class="container">
+    <div class="item1" onclick="quali1()"></div>
+    <div class="item2" onclick="quali1()"></div>
+    <div class="item3" onclick="quali2()"></div>
+    <div class="item4" onclick="quali3()"></div>
+    <div class="item5" onclick="quali2()"></div>
+    <div class="item6" onclick="quali1()"></div>
+   </div>
+   
+   <script>
+    var nota = document.getElementById("sua")
+    function quali1() {
+        console.log("1")
+        sua.innerHTML = "você tem bom gosto"
+        sua.style.color = "green"
+
+       
+
+       
+
+    }
+    function quali2() {
+        console.log("2")
+        sua.innerHTML = "da pra assistir mas , não é bom o suficiente"
+        sua.style.color = "gray"
+    }
+    function quali3() {
+        console.log("3")
+        sua.innerHTML = "você tem problemas pscicologicos"
+        sua.style.color = "red"
+    }
+   </script>
+</body>
+</html>

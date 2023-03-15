@@ -78,14 +78,18 @@ width: 300px;
         res.innerHTML = `<p>sua velocidade atual é de <strong>${vel} Km/h </strong></p>`
         
 
-        if ( vel > 60) {
-            res.innerHTML += `<p>Você esta sendo <strong>MULTADO</strong> por excesso de velocidade</p>`
-
-        }
-        else {
+        
+        if ( vel <60) {
             res.innerHTML += `<p>Você esta em uma velocidade <strong>Segura</strong> continue seu trajeto <br> e use sempre o sinto de segurança `
+        }
+        else if ( vel <= 60 || 300) {
+            res.innerHTML += `<p>Você esta sendo <strong>MULTADO</strong> por excesso de velocidade</p>`
             
         }
+        if (vel > 300){
+          res.innerHTML += `<p> você estaria multado se não estivesse  <strong>MORTO</strong>`
+        }
+
        
     }
 

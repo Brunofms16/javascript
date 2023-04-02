@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idades</title>
+    <style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+  
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 80px;
+        box-shadow: 16px 20px 0px 7px;
+
+    }
+    header {
+        text-align: center;
+        color: #313131;
+    }
+div {
+background-color: white;
+}
+img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+
+}
+#msg {margin-bottom: 20px;}
+h1 {
+padding-bottom: 20px;
+}
+#img {
+margin-bottom: 30px;
+}
+footer {
+color: #cc6f45;
+text-align: center;
+padding-top: 20px;
+}
+</style>
+</head>
+<body>
+    <h1>Vamos contar</h1>
+    <div class="container">
+        <h1>Verificador de idades
+        </h1>
+        
+        <div id="dados">
+            <p>Inicio: <input type="number" name="inicio" id="txt1" min="0"></p>
+             <p>Fim :  <input type="number" name="fim" id="txtf" checked>
+            <p>passo:<input type="number" name="passo" id="txtp"></p>
+                <div class="btn" onclick="numeros()">
+                   
+                </div>
+                <div class="item6" > <input type="button" value="contar" onclick="quali1()"></div>
+            
+        </div>
+        
+        <div id="res ">
+           
+    
+        </div>
+        
+<script >
+     var ini = document.getElementById("txti") 
+    var fim = document.getElementById("txtf")
+    var passo = document.getElementById("txtp")
+    var res = document.getElementById("res")
+    
+
+   
+    
+    
+    
+    
+    function quali1() {
+        console.log("1")
+        
+         {
+                alert("insira os dados e tente novamente")
+            } else {
+                res.innerHTML = "contando..."
+            }
+    }
+
+</script>
+</body>
+</html>

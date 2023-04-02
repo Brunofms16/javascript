@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>gerador de tabuada</h1>
+
+<div id="test"> 
+    <p>numero <input type="number" name="num" id="txtn"></p>
+    <input type="button" name="btn" id="btn" value="gerar tabuada" onclick="tab()" >
+</div>
+
+        <div id="tabdiv">
+            <select name="tab" id="tab" size=10>
+                <option >Digite um numero acima</option>
+            </select>
+        
+        </div>
+    </div>
+
+    <script>
+        function tab() {
+            let num = document.getElementById("txtn")
+            let tab = document.getElementById("tab")
+            if(num.value.length == 0){
+                alert("por favor digite um numero")
+            }
+            else {
+                let n = Number(num.value)
+               
+                tab.innerHTML = ""
+            for (let c = 1 ; c <= 10 ; c++) {
+                    let it = document.createElement("option")
+                    item.text = `${n} X ${c} = ${n*c}`
+    tab.appendChild(it)
+    
+}
+}
+}
+     
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+<div id="dados">
+    <p>Inicio:<input type="number" name="txtn" id="txtn"></p>
+    <p>fim:<input type="number" name="txtf" id="txtf"></p>
+    <p>passo:<input type="number" name="txtp" id="txtp"></p>
+</div>
+
+<div class="btn" onclick="contar()">
+    <input type="button" name="" id="" value="Contar" >
+</div>
+
+<div id="res">
+
+</div>
+
+<script >
+    var inicio = document.getElementById("txtn")
+var passo = document.getElementById("txtp")
+var fim = document.getElementById("txtf")
+var res = document.getElementById("res")
+
+function contar() {
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        
+alert("[ERRO] impossivel contar , insira os dados")
+    } else {
+        res.innerHTML = "contando.. <br>"
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (p <= 0 ) {
+alert("passo invalido ! considere passo 1")
+        }
+if ( i < f ) {
+    for(let c = i; c <= f ; c += p) {
+        res.innerHTML += `  \u{1f449} ${c}`
+    }
+}else {
+    for(c = i ; c >= f ; c -= p ){
+        res.innerHTML += `  \u{1f449} ${c}`
+    }
+}
+    }
+    
+}
+
+</script>
+</body>
+</html>
